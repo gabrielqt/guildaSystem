@@ -22,6 +22,7 @@ public class Mission {
 
     @NotBlank
     @Size(min = 5, max = 100)
+    @Column(unique = true)
     private String title;
 
     @Min(0)
@@ -111,5 +112,17 @@ public class Mission {
 
     public void setStatus(EnumMissionStatus status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Mission{" +
+                "missionId=" + missionId +
+                ", title='" + title + '\'' +
+                ", minimalXp=" + minimalXp +
+                ", xpReward=" + xpReward +
+                ", missionHeroes=" + missionHeroes +
+                ", status=" + status +
+                '}';
     }
 }

@@ -62,4 +62,13 @@ public class Guild {
     public void setGuildHeroes(List<Hero> guildHeroes) {
         this.guildHeroes = guildHeroes;
     }
+
+    @Override
+    public String toString() {
+        return "Guild{" +
+                "guildId=" + guildId +
+                ", guildName='" + guildName + '\'' +
+                ", guildHeroes=" + guildHeroes +
+                '}';
+    }
 }

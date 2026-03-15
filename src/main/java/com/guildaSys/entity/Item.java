@@ -15,6 +15,7 @@ public class Item {
     private Long itemId;
 
     @NotBlank
+    @Column(unique = true)
     private String itemName;
 
     @Enumerated(EnumType.STRING)
@@ -52,5 +53,14 @@ public class Item {
 
     public void setItemName(String itemName) {
         this.itemName = itemName;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "itemId=" + itemId +
+                ", itemName='" + itemName + '\'' +
+                ", rarity=" + rarity +
+                '}';
     }
 }

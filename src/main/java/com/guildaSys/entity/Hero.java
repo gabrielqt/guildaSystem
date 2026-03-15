@@ -19,6 +19,7 @@ public class Hero {
     private Long heroId;
 
     @NotBlank
+    @Column(unique = true)
     private String nickname;
 
     @Min(0)
@@ -89,5 +90,16 @@ public class Hero {
 
     public void setInventory(Set<Item> inventory) {
         this.inventory = inventory;
+    }
+
+    @Override
+    public String toString() {
+        return "Hero{" +
+                "heroId=" + heroId +
+                ", nickname='" + nickname + '\'' +
+                ", xp=" + xp +
+                ", inventory=" + inventory +
+                ", guild=" + guild +
+                '}';
     }
 }

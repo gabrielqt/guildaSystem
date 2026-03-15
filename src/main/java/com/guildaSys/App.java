@@ -1,6 +1,6 @@
 package com.guildaSys;
 
-import com.bank.config.JPAUtil;
+import com.guildaSys.config.JPAUtil;
 import jakarta.persistence.EntityManager;
 
 public class App {
