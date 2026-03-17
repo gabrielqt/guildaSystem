@@ -1,4 +1,4 @@
-❌ Herói não pode aceitar missão se o nível for menor que o exigido
+❌ Herói não pode aceitar missão se o nível for meno.r que o exigido
 ❌ Inventário tem limite de 5 itens por herói
 ✅ Ao completar missão, herói ganha XP e sobe de nível automaticamente
 ❌ Missão não pode ser aceita se já estiver completa
@@ -14,3 +14,4 @@ level 7 - 3000
 level 8 - 1000
 level 9 - 12500
 level 10 - 15000 (max)
+
