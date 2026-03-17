@@ -49,7 +49,10 @@ public class GenericRepositoryImpl<T, ID> implements GenericRepository<T, ID> {
 
     @Override
     public Integer count() {
-        return 0;
+        EntityManager em = JPAUtil.getEntityManager();
+        return em.createQuery(
+                "SELECT COUNT(e) FROM " + entityClass.getSimpleName() + " e", Long.class
+        ).getSingleResult().intValue();
     }
 
 }
