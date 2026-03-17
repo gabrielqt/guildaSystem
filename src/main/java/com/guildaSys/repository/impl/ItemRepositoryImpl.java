@@ -5,7 +5,7 @@ import com.guildaSys.repository.interfaces.ItemRepository;
 import com.guildaSys.repository.interfaces.GenericRepository;
 
 public class ItemRepositoryImpl extends GenericRepositoryImpl<Item, Long>  implements ItemRepository {
-    protected ItemRepositoryImpl() {
+    public ItemRepositoryImpl() {
         super(Item.class);
     }
 }

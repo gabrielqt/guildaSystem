@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cc8e7b6-9ba5-4c06-b5d9-0792274f3870" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/impl/GuildRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/impl/MissionRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/interfaces/GuildRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/interfaces/MissionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/service/GenericService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/service/GuildService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/service/HeroService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/service/ItemService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/entity/Guild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/entity/Guild.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/impl/GenericRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/impl/GenericRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/impl/ItemRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/impl/ItemRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/interfaces/GenericRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/interfaces/GenericRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/interfaces/MissionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/interfaces/MissionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/service/business.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/service/business.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

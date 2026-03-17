@@ -31,9 +31,9 @@ public class GenericRepositoryImpl<T, ID> implements GenericRepository<T, ID> {
     }
 
     @Override
-    public T save(T obj) {
+    public Optional<T> save(T obj) {
         EntityManager em = JPAUtil.getEntityManager();
-        return em.merge(obj);
+        return Optional.ofNullable(em.merge(obj));
     }
 
     @Override
@@ -46,13 +46,4 @@ public class GenericRepositoryImpl<T, ID> implements GenericRepository<T, ID> {
         em.remove(entity);
         return true;
     }
-
-    @Override
-    public Integer count() {
-        EntityManager em = JPAUtil.getEntityManager();
-        return em.createQuery(
-                "SELECT COUNT(e) FROM " + entityClass.getSimpleName() + " e", Long.class
-        ).getSingleResult().intValue();
-    }
-
 }
