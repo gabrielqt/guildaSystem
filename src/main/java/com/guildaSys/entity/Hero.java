@@ -1,5 +1,6 @@
 package com.guildaSys.entity;
 
+import com.guildaSys.enums.Level;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -92,14 +93,17 @@ public class Hero {
         this.inventory = inventory;
     }
 
+    public Level getLevel() {
+        return Level.getLevelByXp(this.xp);
+    }
+
     @Override
     public String toString() {
-        return "Hero{" +
-                "heroId=" + heroId +
-                ", nickname='" + nickname + '\'' +
-                ", xp=" + xp +
-                ", inventory=" + inventory +
-                ", guild=" + guild +
-                '}';
+        return
+                "- heroId=" + heroId + '\'' +
+                "- nickname='" + nickname + '\'' +
+                "- level=" + getLevel() + '\'' +
+                "- inventory=" + inventory + '\'' +
+                "- guild=" + guild  + '\'';
     }
 }

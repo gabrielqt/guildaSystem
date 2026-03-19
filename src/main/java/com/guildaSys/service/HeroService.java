@@ -1,8 +1,12 @@
 package com.guildaSys.service;
 
+import com.guildaSys.config.JPAUtil;
 import com.guildaSys.entity.Hero;
+import com.guildaSys.enums.Operator;
 import com.guildaSys.repository.impl.HeroRepositoryImpl;
 import com.guildaSys.repository.interfaces.GenericRepository;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 
 import java.util.Optional;
 
@@ -16,6 +20,35 @@ public class HeroService extends GenericService<Hero, Long>{
     }
 
     public Optional<Hero> findByNickname(String nickname){
-        return heroRepository.findByNickname(nickname);
+        EntityManager em = JPAUtil.getEntityManager();
+        try{
+            return heroRepository.findByNickname(nickname);
+        } finally {
+            JPAUtil.closeEntityManager();
+        }
     }
+
+    public Optional<Hero> changeXp(Hero hero, Integer xp, Operator operator) {
+        EntityManager em = JPAUtil.getEntityManager();
+        EntityTransaction tx = em.getTransaction();
+        try{
+            tx.begin();
+
+            if (operator == Operator.ADD)     hero.setXp(hero.getXp() + xp);
+            else if (operator == Operator.SUBTRACT)   hero.setXp(hero.getXp() - xp);
+
+            Optional<Hero> hero_ = heroRepository.save(hero);
+            tx.commit();
+            return hero_;
+        } catch (RuntimeException e) {
+            System.out.println("Não foi possível atualizar o xp do herói.");
+            if (tx != null && tx.isActive())tx.rollback();
+            throw e;
+        } finally {
+            JPAUtil.closeEntityManager();
+        }
+
+
+    }
+
 }
