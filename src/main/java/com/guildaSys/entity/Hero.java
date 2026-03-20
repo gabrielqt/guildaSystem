@@ -97,13 +97,19 @@ public class Hero {
         return Level.getLevelByXp(this.xp);
     }
 
+    public void setGuild(Guild guild) {
+        this.guild = guild;
+    }
+
     @Override
     public String toString() {
         return
-                "- heroId=" + heroId + '\'' +
-                "- nickname='" + nickname + '\'' +
-                "- level=" + getLevel() + '\'' +
-                "- inventory=" + inventory + '\'' +
-                "- guild=" + guild  + '\'';
+                "- heroId=" + heroId + '\n' +
+                "- nickname=" + nickname + '\n' +
+                "- level=" + getLevel() + '\n' +
+                "- inventory=" + inventory + '\n' +
+                "- guild=" + (guild != null ? guild.getGuildName() : "No Guild")  + '\n';
     }
+
+
 }

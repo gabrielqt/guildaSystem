@@ -1,6 +1,7 @@
 package com.guildaSys.service;
 
 import com.guildaSys.config.JPAUtil;
+import com.guildaSys.entity.Guild;
 import com.guildaSys.entity.Hero;
 import com.guildaSys.enums.Operator;
 import com.guildaSys.repository.impl.HeroRepositoryImpl;
@@ -51,4 +52,21 @@ public class HeroService extends GenericService<Hero, Long>{
 
     }
 
+    public void joinGuild(Guild guild, Hero hero) {
+        EntityManager em = JPAUtil.getEntityManager();
+        EntityTransaction tx = em.getTransaction();
+        try{
+            tx.begin();
+            guild.getGuildHeroes().add(hero);
+            hero.setGuild(guild);
+            tx.commit();
+            System.out.println(hero.getNickname() + " entrou na Guild: " + guild.getGuildName());
+        } catch (RuntimeException e) {
+            if(tx.isActive())tx.rollback();
+            throw e;
+        }
+        finally {
+            JPAUtil.closeEntityManager();
+        }
+    }
 }

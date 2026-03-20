@@ -25,8 +25,6 @@ public class Guild {
         return Objects.equals(getGuildId(), guild.getGuildId());
     }
 
-
-
     @Override
     public int hashCode() {
         return Objects.hashCode(getGuildId());

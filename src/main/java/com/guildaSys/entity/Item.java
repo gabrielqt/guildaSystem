@@ -51,16 +51,16 @@ public class Item {
         return itemName;
     }
 
+    public EnumRarity getRarity() {
+        return rarity;
+    }
+
     public void setItemName(String itemName) {
         this.itemName = itemName;
     }
 
     @Override
     public String toString() {
-        return "Item{" +
-                "itemId=" + itemId +
-                ", itemName='" + itemName + '\'' +
-                ", rarity=" + rarity +
-                '}';
+        return this.getItemName() + " | " + this.getRarity();
     }
 }
