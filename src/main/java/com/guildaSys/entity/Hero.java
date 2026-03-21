@@ -81,8 +81,17 @@ public class Hero {
         return xp;
     }
 
+    public void addXp(Integer xp){
+        setXp(this.getXp() + xp);
+    }
+
     public void setXp(Integer xp) {
-        this.xp = xp;
+        if (xp > 15000){
+            this.xp = 15000;
+        }
+        else {
+            this.xp = xp;
+        }
     }
 
     public Set<Item> getInventory() {
@@ -106,9 +115,7 @@ public class Hero {
         return
                 "- heroId=" + heroId + '\n' +
                 "- nickname=" + nickname + '\n' +
-                "- level=" + getLevel() + '\n' +
-                "- inventory=" + inventory + '\n' +
-                "- guild=" + (guild != null ? guild.getGuildName() : "No Guild")  + '\n';
+                "- level=" + getLevel() + '\n';
     }
 
 

@@ -22,11 +22,11 @@ public class GenericRepositoryImpl<T, ID> implements GenericRepository<T, ID> {
     }
 
     @Override
-    public Optional<List<T>> findAll() {
+    public List<T> findAll() {
         EntityManager em = JPAUtil.getEntityManager();
-        return Optional.ofNullable(em.createQuery(
+        return em.createQuery(
                 "SELECT e FROM " + entityClass.getSimpleName() + " e", entityClass
-        ).getResultList());
+        ).getResultList();
 
     }
 

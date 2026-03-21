@@ -5,7 +5,7 @@ import java.util.Optional;
 
 public interface GenericRepository<T, ID> {
     Optional<T> findById(ID id);
-    Optional<List<T>> findAll();
+    List<T> findAll();
     Optional<T> save(T item);
     boolean deleteById(ID id);
 }

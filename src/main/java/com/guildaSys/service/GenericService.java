@@ -21,7 +21,7 @@ public abstract class GenericService <T, ID>
         }
     }
 
-    public Optional<List<T>> findAll() {
+    public List<T> findAll() {
         EntityManager em = JPAUtil.getEntityManager();
         try{
             return getRepository().findAll();

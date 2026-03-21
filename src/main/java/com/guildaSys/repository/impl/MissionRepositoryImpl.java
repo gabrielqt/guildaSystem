@@ -20,6 +20,7 @@ public class MissionRepositoryImpl extends GenericRepositoryImpl<Mission, Long> 
         TypedQuery<Mission> query = em.createQuery(
                 "SELECT m FROM Mission m JOIN m.missionHeroes h WHERE h.id = :heroId", Mission.class
         );
+        query.setParameter("heroId", heroId);
         return query.getResultList();
     }
 }

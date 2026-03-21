@@ -31,29 +31,6 @@ public class HeroService extends GenericService<Hero, Long>{
         }
     }
 
-    public Optional<Hero> changeXp(Hero hero, Integer xp, Operator operator) {
-        EntityManager em = JPAUtil.getEntityManager();
-        EntityTransaction tx = em.getTransaction();
-        try{
-            tx.begin();
-
-            if (operator == Operator.ADD)     hero.setXp(hero.getXp() + xp);
-            else if (operator == Operator.SUBTRACT)   hero.setXp(hero.getXp() - xp);
-
-            Optional<Hero> hero_ = heroRepository.save(hero);
-            tx.commit();
-            return hero_;
-        } catch (RuntimeException e) {
-            System.out.println("Não foi possível atualizar o xp do herói.");
-            if (tx != null && tx.isActive())tx.rollback();
-            throw e;
-        } finally {
-            JPAUtil.closeEntityManager();
-        }
-
-
-    }
-
     public void joinGuild(Guild guild, Hero hero) {
         EntityManager em = JPAUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
@@ -90,6 +67,8 @@ public class HeroService extends GenericService<Hero, Long>{
         }
     }
 
+
+// FIX THIS: USE HEROID AND ITEMID (ELSE: LAZY EXCEPTION)
     public void addItemInHeroInventory(Item item, Hero hero) {
         if (hero.getInventory().size() > 5) {
             throw new MaximunItensInInvetoryException();

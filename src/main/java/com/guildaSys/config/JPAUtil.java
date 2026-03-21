@@ -13,7 +13,7 @@ public class JPAUtil {
 
     public static EntityManager getEntityManager() {
         EntityManager em = threadLocal.get();
-        if (em == null || em.isOpen()) {
+        if (em == null || !em.isOpen()) {
             em = emf.createEntityManager();
             threadLocal.set(em);
         }
@@ -22,7 +22,7 @@ public class JPAUtil {
 
     public static void closeEntityManager() {
         EntityManager em = threadLocal.get();
-        if (em != null ||  em.isOpen()) {
+        if (em != null &&  em.isOpen()) {
             em.close();
         }
         threadLocal.remove();

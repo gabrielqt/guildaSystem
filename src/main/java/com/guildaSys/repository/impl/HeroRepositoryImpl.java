@@ -34,12 +34,12 @@ public class HeroRepositoryImpl extends GenericRepositoryImpl<Hero, Long> implem
         return query.getResultStream().findFirst();
     }
 
-    public Optional<List<Hero>> getHeroesByGuildSortedByXp (Guild guild){
+    public List<Hero> getHeroesByGuildSortedByXp (Guild guild){
         EntityManager em = JPAUtil.getEntityManager();
         TypedQuery<Hero> query = em.createQuery(
                 "SELECT h FROM Hero h WHERE h.guild = :guild ORDER BY h.xp DESC", Hero.class
         );
         query.setParameter("guild", guild);
-        return Optional.of(query.getResultList());
+        return query.getResultList();
     }
 }

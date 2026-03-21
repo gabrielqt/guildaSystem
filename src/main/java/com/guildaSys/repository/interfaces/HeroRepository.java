@@ -9,5 +9,5 @@ import java.util.Optional;
 public interface HeroRepository extends GenericRepository<Hero, Long> {
     Optional<Hero> findByNickname(String nickname);
     Optional<Hero> findByIdHeroWithGuildAndInventory(Long idHero);
-    Optional<List<Hero>> getHeroesByGuildSortedByXp (Guild guild);
+    List<Hero> getHeroesByGuildSortedByXp (Guild guild);
 }

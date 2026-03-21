@@ -116,13 +116,10 @@ public class Mission {
 
     @Override
     public String toString() {
-        return "Mission{" +
-                "missionId=" + missionId +
-                ", title='" + title + '\'' +
-                ", minimalXp=" + minimalXp +
-                ", xpReward=" + xpReward +
-                ", missionHeroes=" + missionHeroes +
-                ", status=" + status +
-                '}';
+        return  "missionId=" + missionId + '\n' +
+                ", title=" + title + '\n' +
+                ", minimalXp=" + minimalXp + '\n' +
+                ", xpReward=" + xpReward + '\n' +
+                ", status=" + status + '\n';
     }
 }
