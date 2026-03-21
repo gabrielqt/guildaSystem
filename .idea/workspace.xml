@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cc8e7b6-9ba5-4c06-b5d9-0792274f3870" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/exceptions/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/exceptions/HeroAlreadyInMissionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/exceptions/InsufficientHeroXpException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/exceptions/MaximunItensInInvetoryException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/exceptions/MissionNotAvailableException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/entity/Guild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/entity/Guild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/entity/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/entity/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/entity/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/enums/EnumRarity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/enums/EnumRarity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/impl/MissionRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/impl/MissionRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/interfaces/MissionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/repository/interfaces/MissionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/service/HeroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/service/HeroService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guildaSys/service/business.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guildaSys/service/business.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +29,7 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
